@@ -23,9 +23,9 @@ This layer depends on:
 
 ## Quick Start
 
-1. git clone https://git.yoctoproject.org/poky -b nanbield
-2. git clone https://git.yoctoproject.org/meta-raspberrypi -b nanbield
-3. git clone https://git.openembedded.org/meta-openembedded -b nanbield
+1. git clone https://git.yoctoproject.org/poky -b scarthgap
+2. git clone https://git.yoctoproject.org/meta-raspberrypi -b scarthgap
+3. git clone https://git.openembedded.org/meta-openembedded -b scarthgap
 4. source poky/oe-init-build-env can-box-build
 5. Add this layer to bblayers.conf and the dependencies above
 6. Set MACHINE in local.conf to raspberrypi4 or raspberrypi4-64
