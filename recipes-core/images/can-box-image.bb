@@ -1,9 +1,9 @@
 # Base this image on core-image-base
 include recipes-core/images/core-image-base.bb
 
-IMAGE_INSTALL:append = " \ 
-			nano \
-"
+#IMAGE_INSTALL:append = " \ 
+#			nano \
+#"
 
 # Make sure the dtbo is copied in the wic file
 RPI_KERNEL_DEVICETREE_OVERLAYS:append = " overlays/seeed-can-fd-hat-v1.dtbo"
