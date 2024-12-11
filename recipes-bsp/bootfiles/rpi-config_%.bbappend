@@ -1,3 +1,5 @@
+FILESEXTRAPATHS:prepend := "${THISDIR}/${PN}:"
+
 do_deploy:append() {
     echo "# Disable Bluetooth" >> $CONFIG
     echo "dtoverlay=disable-bt" >> $CONFIG
