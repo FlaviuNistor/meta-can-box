@@ -1,5 +1,5 @@
 # Base this image on core-image-base
-include recipes-core/images/core-image-base.bb
+include recipes-core/images/core-image-minimal.bb
 
 #IMAGE_INSTALL:append = " \ 
 #			nano \

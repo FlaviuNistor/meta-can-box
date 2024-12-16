@@ -1,0 +1,29 @@
+From 9572f717129b6fd285dc3c0530b221e706d98d34 Mon Sep 17 00:00:00 2001
+From: nistorf <flaviu.nistor@continental-corporation.com>
+Date: Mon, 16 Dec 2024 16:03:39 +0200
+Subject: [PATCH] add LED to rpi4 dts
+
+---
+ arch/arm/boot/dts/broadcom/bcm2711-rpi-4-b.dts | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+diff --git a/arch/arm/boot/dts/broadcom/bcm2711-rpi-4-b.dts b/arch/arm/boot/dts/broadcom/bcm2711-rpi-4-b.dts
+index 353bb50ce542..68f7e34701c2 100644
+--- a/arch/arm/boot/dts/broadcom/bcm2711-rpi-4-b.dts
++++ b/arch/arm/boot/dts/broadcom/bcm2711-rpi-4-b.dts
+@@ -163,6 +163,12 @@ led_pwr: led-pwr {
+ 		default-state = "keep";
+ 		linux,default-trigger = "default-on";
+ 	};
++	led_test: led-test{
++		label = "TEST";
++		gpios = <&gpio 18 GPIO_ACTIVE_HIGH>;
++		default-state = "on";
++		linux,default-trigger = "hearbeat";
++	};
+ };
+ 
+ &pixelvalve0 {
+-- 
+2.25.1
+
