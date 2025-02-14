@@ -1,5 +1,7 @@
 # Base this image on core-image-base
-include recipes-core/images/core-image-minimal.bb
+require recipes-core/images/core-image-minimal.bb
+
+SUMMARY = "A custom image that configured the device to run the can-box application."
 
 #IMAGE_INSTALL:append = " \ 
 #			nano \
