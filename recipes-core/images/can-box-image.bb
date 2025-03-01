@@ -3,9 +3,10 @@ require recipes-core/images/core-image-minimal.bb
 
 SUMMARY = "A custom image that configured the device to run the can-box application."
 
-#IMAGE_INSTALL:append = " \ 
-#			nano \
-#"
+IMAGE_INSTALL:append = " \ 
+			can-box \
+			boot-automation \
+"
 
 # Make sure the dtbo is copied in the wic file
 RPI_KERNEL_DEVICETREE_OVERLAYS:append = " overlays/seeed-can-fd-hat-v1.dtbo"

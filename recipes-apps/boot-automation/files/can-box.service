@@ -1,0 +1,11 @@
+[Unit]
+Description=Start CAN BOX app at bootup
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStartPre=/bin/sleep 1
+ExecStart=/bin/bash -c '/opt/can-box/can-box-start.sh can0'
+
+[Install]
+WantedBy=network.target
