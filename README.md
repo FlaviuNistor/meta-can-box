@@ -23,15 +23,21 @@ This layer depends on:
 
 ## Quick Start
 
-1. git clone https://git.yoctoproject.org/poky -b scarthgap
-2. git clone https://git.yoctoproject.org/meta-raspberrypi -b scarthgap
-3. git clone https://git.openembedded.org/meta-openembedded -b scarthgap
-4. source poky/oe-init-build-env can-box-build
-5. Add this layer to bblayers.conf and the dependencies above
-6. Set MACHINE in local.conf to raspberrypi4 or raspberrypi4-64
-7. bitbake rpi-can-tester-image
-8. Use bmaptool to copy the generated .wic.bz2 file to the SD card
-9. Boot your RPI
+1. Make sure you have all the prerequierments https://docs.yoctoproject.org/ref-manual/system-requirements.html#supported-linux-distributions
+2. git clone https://git.yoctoproject.org/poky -b scarthgap
+3. git clone https://git.yoctoproject.org/meta-raspberrypi -b scarthgap
+4. git clone https://git.openembedded.org/meta-openembedded -b scarthgap
+5. source poky/oe-init-build-env can-box-build
+6. Add the above layers to bblayers.conf https://docs.yoctoproject.org/dev/dev-manual/layers.html
+7. Set MACHINE in local.conf MACHINE = "raspberrypi4-64" (or raspberrypi for 32 bit OS)
+8. Set DISTRO in local.conf DISTRO ?= "can-box-rootfs"
+8. bitbake rpi-can-tester-image
+9. Use bmaptool to copy the generated .wic.bz2 file to the SD card
+10. Boot your RPI
+
+## Note
+
+If you are using Ubuntu2024 and have issues starting bitbake use: sudo apparmor_parser -R /etc/apparmor.d/unprivileged_userns
 
 ## Maintainers
 
