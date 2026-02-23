@@ -5,7 +5,8 @@ After=network.target
 [Service]
 Type=oneshot
 ExecStartPre=/bin/sleep 1
-ExecStart=/bin/bash -c '/opt/can-box/can-box-start.sh can0'
+ExecStart=/usr/bin/python3 -c '/opt/can-box/app.py'
+Restart=always
 
 [Install]
 WantedBy=network.target
