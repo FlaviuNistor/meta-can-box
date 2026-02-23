@@ -3,7 +3,11 @@ require recipes-core/images/core-image-minimal.bb
 
 SUMMARY = "A custom image that configured the device to run the can-box application."
 
-IMAGE_INSTALL:append = " \ 
+IMAGE_INSTALL:append = " \
+			python3 \
+			python3-flask \
+			python3-simple-websocket \
+			python3-flask-socketio \
 			can-box \
 			boot-automation \
 "
