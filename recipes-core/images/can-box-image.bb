@@ -1,15 +1,19 @@
 # Base this image on core-image-base
-require recipes-core/images/core-image-minimal.bb
+require recipes-core/images/core-image-base.bb
 
 SUMMARY = "A custom image that configured the device to run the can-box application."
 
+# Enable SSH server
+IMAGE_FEATURES += "ssh-server-dropbear"
+
 IMAGE_INSTALL:append = " \
-			python3 \
-			python3-flask \
-			python3-simple-websocket \
 			python3-flask-socketio \
-			can-box \
+			python3-simple-websocket \
+			rpi-gpio \
 			boot-automation \
+			can-box \
+			dhcpcd \
+			can-utils \
 "
 
 # Make sure the dtbo is copied in the wic file
