@@ -16,8 +16,11 @@ IMAGE_INSTALL:append = " \
 			can-utils \
 "
 
-# Make sure the dtbo is copied in the wic file
-RPI_KERNEL_DEVICETREE_OVERLAYS:append = " overlays/seeed-can-fd-hat-v1.dtbo"
+IMAGE_INSTALL:append::raspberrypi4 = " rpi-gpio \
+"
+
+# Make sure the dtbo is copied in the wic file for raspberry pi 4
+RPI_KERNEL_DEVICETREE_OVERLAYS:append:raspberrypi4 = " overlays/seeed-can-fd-hat-v1.dtbo"
 
 # Define a variable to hold the list of systemd unit config files to be modified.
 # Modify the video console config files.
