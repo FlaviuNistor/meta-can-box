@@ -9,6 +9,7 @@ IMAGE_FEATURES += "ssh-server-dropbear"
 IMAGE_INSTALL:append = " \
 			python3-flask-socketio \
 			python3-simple-websocket \
+			python3-wsproto \
 			rpi-gpio \
 			boot-automation \
 			can-box \
