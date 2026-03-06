@@ -29,9 +29,19 @@ This layer depends on:
 4. git clone https://git.openembedded.org/meta-openembedded -b scarthgap
 5. source poky/oe-init-build-env can-box-build
 6. Add the above layers to bblayers.conf https://docs.yoctoproject.org/dev/dev-manual/layers.html
+	Should looks like:
+	BBLAYERS ?= " \
+		/<your_path>/sources/poky/meta \
+		/<your_path>/sources/poky/meta-poky \
+		/<your_path>/sources/poky/meta-yocto-bsp \
+		/<your_path>/sources/meta-raspberrypi \
+		/<your_path>/sources/meta-can-box \
+		/<your_path>/sources/meta-openembedded/meta-oe \
+		/<your_path>/sources/meta-openembedded/meta-python \
+		"
 7. Set MACHINE in local.conf MACHINE = "raspberrypi4-64" (or raspberrypi for 32 bit OS)
 8. Set DISTRO in local.conf DISTRO ?= "can-box-rootfs"
-8. bitbake rpi-can-tester-image
+8. bitbake -k can-box-image
 9. Use bmaptool to copy the generated .wic.bz2 file to the SD card
 10. Boot your RPI
 
