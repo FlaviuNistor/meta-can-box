@@ -12,21 +12,21 @@ The target for the image it is to be as small as posible and boot as fast as pos
 This layer depends on:
 
 * URI: git://git.yoctoproject.org/poky
-  * branch: scarthgap
+  * branch: nanbield
   * revision: HEAD
 * URI: git.yoctoproject.org/meta-raspberrypi
-  * branch: scarthgap
+  * branch: nanbield
   * revision: HEAD 
 * URI: git.openembedded.org/meta-openembedded
-  * branch: scarthgap
+  * branch: nanbield
   * revision: HEAD
 
 ## Quick Start
 
 1. Make sure you have all the prerequierments https://docs.yoctoproject.org/ref-manual/system-requirements.html#supported-linux-distributions
-2. git clone https://git.yoctoproject.org/poky -b scarthgap
-3. git clone https://git.yoctoproject.org/meta-raspberrypi -b scarthgap
-4. git clone https://git.openembedded.org/meta-openembedded -b scarthgap
+2. git clone https://git.yoctoproject.org/poky -b nanbield
+3. git clone https://git.yoctoproject.org/meta-raspberrypi -b nanbield
+4. git clone https://git.openembedded.org/meta-openembedded -b nanbield
 5. source poky/oe-init-build-env can-box-build
 6. Add the above layers to bblayers.conf https://docs.yoctoproject.org/dev/dev-manual/layers.html
 	Should looks like:
